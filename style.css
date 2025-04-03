@@ -10,11 +10,24 @@
     }
 }
 
+@keyframes themeTransition {
+    0% {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 @keyframes glowing-dots {
     0% { background-position: 0 0; }
     50% { background-position: 100% 100%; }
     100% { background-position: 0 0; }
 }
+
+
 
 /* General Reset */
 * {
@@ -23,6 +36,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --transition-speed: 0.3s;
+    --theme-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --dark-gradient: linear-gradient(135deg, 
+        #1a0b2e 0%,
+        #2d1b4e 25%,
+        #432870 50%,
+        #5a3d8c 75%,
+        #6b4a9e 100%);
+    --light-gradient: linear-gradient(135deg, 
+        #f5f7fa 0%,
+        #e0e4e9 25%,
+        #cbd2d9 50%,
+        #b6bfc8 75%,
+        #a1aab4 100%);
+}
 /* Body Styling */
 body {
     font-family: 'Segoe UI Light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -41,6 +70,9 @@ body {
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+    background: var(--dark-gradient);
+    transition: var(--theme-transition);
+    animation: themeTransition 0.5s ease-out;
 }
 
 /* Glowing Dots Effect */
@@ -611,6 +643,39 @@ footer {
     display: none;
 }
 
+/* Theme Transition Effects */
+header,
+.main-content,
+.info-box,
+footer,
+nav a,
+.theme-toggle,
+h1, h2, h3, h4,
+p, li,
+.form-group input,
+.form-group textarea,
+.form-group select,
+.submit-btn {
+    transition: var(--theme-transition);
+}
+
+/* Update theme-specific styles */
+[data-theme="light"] {
+    background: var(--light-gradient);
+    color: #2d1b4e;
+}
+
+[data-theme="light"] header,
+[data-theme="light"] .main-content,
+[data-theme="light"] .info-box,
+[data-theme="light"] footer {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-color: rgba(0, 0, 0, 0.1);
+    animation: themeTransition 0.5s ease-out;
+}
+
 /* Dark Mode Styles */
 [data-theme="dark"] .sun-icon {
     display: none;
@@ -754,5 +819,23 @@ footer {
 
     .menu-overlay.active {
         display: block;
+    }
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .header-right {
+        margin-left: 0;
     }
 }
