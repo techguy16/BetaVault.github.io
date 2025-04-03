@@ -38,7 +38,7 @@
                 
                 <form class="contribution-form">
                     <div class="form-group">
-                        <label for="name">Preferred Identity (for credits)</label>
+                        <label for="name">Preferred Identity (for attribution)</label>
                         <input type="text" id="name" name="name" required>
                     </div>
 
@@ -58,13 +58,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="build-info">Build Information</label>
-                        <input type="text" id="build-info" name="build-info" placeholder="e.g., Windows 7 Build 7000" required>
+                        <label for="description">Link to Build</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Link to Build</label>
-                        <textarea id="description" name="description" rows="4" required></textarea>
+                        <label for="build-info">Build Information</label>
+                        <input type="text" id="build-info" name="build-info" placeholder="e.g., Windows 7 Build 7000" required>
                     </div>
                     
                     <button type="submit" class="submit-btn">Submit Contribution</button>
