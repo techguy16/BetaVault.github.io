@@ -574,3 +574,85 @@ footer {
         background: rgba(147, 112, 219, 0.2);
     }
 }
+/* Dark Mode Toggle */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: rgba(186, 85, 211, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.theme-toggle:hover {
+    background: rgba(186, 85, 211, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(186, 85, 211, 0.3);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+.moon-icon {
+    display: none;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .sun-icon {
+    display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+    display: block;
+}
+
+[data-theme="light"] {
+    background: linear-gradient(135deg, 
+        #f5f7fa 0%,
+        #e0e4e9 25%,
+        #cbd2d9 50%,
+        #b6bfc8 75%,
+        #a1aab4 100%);
+    color: #2d1b4e;
+}
+
+[data-theme="light"] header,
+[data-theme="light"] .main-content,
+[data-theme="light"] .info-box,
+[data-theme="light"] footer {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4 {
+    color: #2d1b4e;
+    text-shadow: 0 0 15px rgba(186, 85, 211, 0.3);
+}
+
+[data-theme="light"] p,
+[data-theme="light"] li {
+    color: #333;
+    text-shadow: none;
+}
+
+[data-theme="light"] nav a {
+    color: #2d1b4e;
+    background: rgba(186, 85, 211, 0.1);
+}
