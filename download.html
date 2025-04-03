@@ -3,51 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetaVault - Downloads</title>
+    <title>Downloads - BetaVault</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>BetaVault</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="download.html">Downloads</a>
-            <a href="contribute.html" class="active">Contribute!</a>
+            <a href="download.html" class="active">Downloads</a>
+            <a href="contribute.html">Contribute!</a>
         </nav>
     </header>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="download.html" class="active">Downloads</a></li>
-            <li><a href="contribute.html">Contribute!</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main Content -->
     <main>
-        <section>
-            <h2>Available Downloads</h2>
-            <p>Click on the buttons below to download your desired beta builds:</p>
-            <div class="download-buttons">
-                <button onclick="window.location.href='download-link-1.zip'">Windows Longhorn Build 4074</button>
-                <button onclick="window.location.href='download-link-2.zip'">Windows XP Neptune Build 5111</button>
-                <button onclick="window.location.href='download-link-3.zip'">Windows Vista Beta 1</button>
-            </div>
-        </section>
+        <div class="content-container">
+            <!-- Main Content Box -->
+            <section class="main-content">
+                <h2>Downloads</h2>
+                <p>Here you can find a collection of beta builds available for download. These builds are sourced from BetaArchive's FTP and other trusted sources.</p>
+                <p>Note: Please ensure you have the appropriate permissions and licenses to use these builds.</p>
+                <ul>
+                    <li><a href="windows7.html">Windows 7 Beta Builds</a></li>
+                    <li><a href="windowsvista.html">Windows Vista Beta Builds</a></li>
+                    <li><a href="windowsxp.html">Windows XP Beta Builds</a></li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>How to Contribute</h2>
-            <p>If you have beta builds you'd like to share, please <a href="contribute.html">contact us</a> to contribute to BetaVault!</p>
-        </section>
+            <!-- Information Box -->
+            <aside class="info-box">
+                <h3>Featured Download: Windows 7 Beta</h3>
+                <p>Explore the early builds of Windows 7, including the pre-release versions that shaped one of Microsoft's most popular operating systems.</p>
+                <ul>
+                    <li>Build: 7000</li>
+                    <li>Release Date: January 7, 2009</li>
+                    <li>Codename: Blackcomb/Vienna</li>
+                </ul>
+            </aside>
+        </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <p>&copy; 2025 BetaVault. All rights reserved.</p>
-        <p>Follow us on <a href="https://twitter.com">Twitter</a> or <a href="https://github.com">GitHub</a>.</p>
     </footer>
 </body>
 </html>

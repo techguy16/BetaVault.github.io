@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetaVault - Contribute</title>
+    <title>Contribute - BetaVault</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>BetaVault</h1>
         <nav>
@@ -16,58 +15,66 @@
             <a href="contribute.html" class="active">Contribute!</a>
         </nav>
     </header>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="download.html">Downloads</a></li>
-            <li><a href="contribute.html" class="active">Contribute!</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main Content -->
     <main>
-        <section>
-            <h2>Why Contribute?</h2>
-            <p>BetaVault thrives on community contributions. By sharing your beta builds, you help preserve software history and make it accessible to everyone.</p>
-        </section>
+        <div class="content-container">
+            <section class="main-content">
+                <h2>Contribute to BetaVault</h2>
+                <p>We welcome contributions from the community! If you have beta builds, documentation, or other resources you'd like to share, please get in touch.</p>
+                
+                <form class="contribution-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-        <section>
-            <h2>How to Contribute</h2>
-            <p>Follow these steps to contribute your beta builds:</p>
-            <ol>
-                <li>Prepare your beta build files (e.g., ISO, VHD, or other formats).</li>
-                <li>Ensure the files are properly labeled with version and build numbers.</li>
-                <li>Upload your files to a file-sharing service (e.g., Google Drive, Dropbox).</li>
-                <li>Send us the download link using the form below or via email.</li>
-            </ol>
-        </section>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-        <section>
-            <h2>Submit Your Contribution</h2>
-            <form action="submit-contribution.php" method="post">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <div class="form-group">
+                        <label for="os-type">Operating System</label>
+                        <select id="os-type" name="os-type" required>
+                            <option value="">Select an OS</option>
+                            <option value="windows">Windows</option>
+                            <option value="linux">Linux</option>
+                            <option value="macos">macOS</option>
+                        </select>
+                    </div>
 
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <div class="form-group">
+                        <label for="build-info">Build Information</label>
+                        <input type="text" id="build-info" name="build-info" placeholder="e.g., Windows 7 Build 7000" required>
+                    </div>
 
-                <label for="link">Download Link:</label>
-                <input type="url" id="link" name="link" placeholder="Paste your download link here" required>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
 
-                <label for="message">Additional Information:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Add any additional details about the beta build"></textarea>
+                    <div class="form-group">
+                        <label for="file">Upload Files</label>
+                        <input type="file" id="file" name="file" multiple>
+                        <small>Max file size: 100MB</small>
+                    </div>
 
-                <button type="submit">Submit Contribution</button>
-            </form>
-        </section>
+                    <button type="submit" class="submit-btn">Submit Contribution</button>
+                </form>
+            </section>
+
+            <aside class="info-box">
+                <h3>Why Contribute?</h3>
+                <p>Your contributions help preserve software history and make beta builds accessible to everyone. Join us in building a comprehensive archive!</p>
+                <ul>
+                    <li>Preserve rare builds</li>
+                    <li>Support the community</li>
+                    <li>Expand the archive</li>
+                </ul>
+            </aside>
+        </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <p>&copy; 2025 BetaVault. All rights reserved.</p>
-        <p>Follow us on <a href="https://twitter.com">Twitter</a> or <a href="https://github.com">GitHub</a>.</p>
     </footer>
 </body>
 </html>

@@ -21,9 +21,11 @@ body {
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-/* Subtle Glow Effect */
+/* Glowing Dots Effect */
 body::before {
     content: '';
     position: fixed;
@@ -31,27 +33,30 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(186, 85, 211, 0.2), transparent 70%);
-    animation: subtle-glow 15s ease-in-out infinite;
-    z-index: -1;
+    background: radial-gradient(circle, rgba(186, 85, 211, 0.4), transparent 70%);
+    z-index: -2;
     pointer-events: none;
-    mix-blend-mode: screen;
 }
 
-/* Subtle Glow Animation */
-@keyframes subtle-glow {
-    0% {
-        opacity: 0.6;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.8;
-        transform: scale(1.05);
-    }
-    100% {
-        opacity: 0.6;
-        transform: scale(1);
-    }
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(186, 85, 211, 0.8) 0%, transparent 70%);
+    animation: glowing-dots 20s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Glowing Dots Animation */
+@keyframes glowing-dots {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0 0; }
 }
 
 /* Header */
@@ -59,6 +64,7 @@ header {
     width: 100%;
     background: rgba(147, 112, 219, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(186, 85, 211, 0.2);
     padding: 1rem;
@@ -66,14 +72,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header h1 {
-    font-size: 2rem;
-    text-shadow: 0 0 10px rgba(186, 85, 211, 0.5), 0 0 20px rgba(147, 112, 219, 0.3);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(186, 85, 211, 0.8), 0 0 30px rgba(147, 112, 219, 0.6);
 }
 
 /* Navigation */
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
@@ -82,81 +98,191 @@ nav a {
     background: rgba(186, 85, 211, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    font-size: 1rem;
+    text-shadow: 0 0 10px rgba(186, 85, 211, 0.5);
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
     background: rgba(186, 85, 211, 0.2);
     box-shadow: 0 0 15px rgba(186, 85, 211, 0.3), 0 0 30px rgba(147, 112, 219, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Main Content Layout */
-.content-container {
-    display: flex;
-    gap: 2rem;
-    width: 95%;
+main {
+    flex: 1;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 1rem;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .content-container {
+        flex-direction: row;
+    }
 }
 
 /* Main Content Box */
 .main-content {
-    flex: 2;
+    flex: 1;
     background: rgba(147, 112, 219, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(186, 85, 211, 0.1);
-}
-
-.main-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 10px rgba(186, 85, 211, 0.5);
-}
-
-.main-content p {
-    margin-bottom: 1rem;
 }
 
 /* Information Box */
 .info-box {
-    flex: 1;
+    flex: 0 0 300px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(186, 85, 211, 0.1);
+    height: fit-content;
 }
 
-.info-box h3 {
-    font-size: 1.5rem;
+/* Typography */
+h2, h3, h4 {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(186, 85, 211, 0.8), 0 0 30px rgba(147, 112, 219, 0.6);
     margin-bottom: 1rem;
+}
+
+h2 { font-size: 2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+
+p {
+    color: #e0e0ff;
+    text-shadow: 0 0 10px rgba(186, 85, 211, 0.5);
+    margin-bottom: 1rem;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #e0e0ff;
     text-shadow: 0 0 10px rgba(186, 85, 211, 0.5);
 }
 
-.info-box p {
-    margin-bottom: 1rem;
+/* Contribution Form */
+.contribution-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.info-box ul {
-    list-style: none;
-    padding-left: 0;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.info-box ul li {
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-    position: relative;
+.form-group label {
+    color: #fff;
+    font-size: 1.1rem;
+    text-shadow: 0 0 10px rgba(186, 85, 211, 0.5);
 }
 
-.info-box ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #e0b0ff;
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(186, 85, 211, 0.5);
+    box-shadow: 0 0 15px rgba(186, 85, 211, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* File Upload Styling */
+.form-group input[type="file"] {
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+}
+
+.form-group input[type="file"]::file-selector-button {
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(186, 85, 211, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+    background: rgba(186, 85, 211, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 1rem 2rem;
+    background: rgba(186, 85, 211, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(186, 85, 211, 0.5);
+    margin-top: 1rem;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background: rgba(186, 85, 211, 0.3);
+    box-shadow: 0 0 20px rgba(186, 85, 211, 0.4);
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -164,6 +290,45 @@ footer {
     text-align: center;
     padding: 1rem;
     background: rgba(147, 112, 219, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: auto;
+}
+
+/* OS Section */
+.os-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.os-item {
+    flex: 0 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(147, 112, 219, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.os-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(186, 85, 211, 0.3);
+}
+
+.os-item img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
 }
