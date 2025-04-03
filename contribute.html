@@ -38,7 +38,7 @@
                 
                 <form class="contribution-form">
                     <div class="form-group">
-                        <label for="name">Preferred Identity (for attribution)</label>
+                        <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
 
@@ -58,15 +58,21 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Link to Build</label>
-                            <input type="text" id="build-info" name="build-info" placeholder="https://www.example.com" required>
+                        <label for="build-info">Build Information</label>
+                        <input type="text" id="build-info" name="build-info" placeholder="e.g., Windows 7 Build 7000" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="build-info">Additional Information</label>
-                            <textarea id="description" name="description" rows="4" required></textarea>
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
                     </div>
-                    
+
+                    <div class="form-group">
+                        <label for="file">Upload Files</label>
+                        <input type="file" id="file" name="file" multiple>
+                        <small>Max file size: 100MB</small>
+                    </div>
+
                     <button type="submit" class="submit-btn">Submit Contribution</button>
                 </form>
             </section>
