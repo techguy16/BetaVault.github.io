@@ -1,5 +1,4 @@
-## about this page
-This is a fork of Betavault which regularly maintains the site, pull requests are sent to the original every week.
+# BetaVault
+## This project aims to provide an alternative to the infamous BetaArchive, without the need for download access.
 
-Original created by: @MSNeptuned
-Forked by: @7Zeb
+Thanks to @7Zeb for the help with the website & NotHype for the support!
