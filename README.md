@@ -1,8 +1,4 @@
-# Betavault Revived
-So the owner of normal Betavault left for a while, so I decided to make a new one.
+# BetaVault
+## This project aims to provide an alternative to the infamous BetaArchive, without the need for download access.
 
-Intrroducing Betavault Revived, a place to Collect, Preserve, and Learn freely
-accses lots of beta builds that are on BetaArchive.
-
-Original created by: @MSNeptuned
-Forked by: @7Zeb
+Thanks to @7Zeb for the help with the website & NotHype for the support!
