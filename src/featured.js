@@ -16,6 +16,14 @@ const availableFeaturedOS = [
     releaseDate: new Date(2001, 10, 25),
     build: 2600,
   },
+
+  {
+    name: "Windows 10 build 9780",
+    desc: "This build brings back the start menu in a Windows 8/8.1 Metro UI style.",
+    codename: "Threshold",
+    releaseDate: new Date(2014, 06, 22),
+    build: 9780
+  }
 ];
 
 const chosenOS = availableFeaturedOS[Math.floor(Math.random() * availableFeaturedOS.length)];
