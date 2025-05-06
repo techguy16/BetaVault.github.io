@@ -6,6 +6,6 @@ This project aims to provide an alternative to the infamous BetaArchive, without
 
 Contributors:
 
-- arnavt78 (aka Viradex)
-- MSNeptuned (aka Threshold)
+- Viradex
+- XenonWindows (aka MSNeptuned, Threshold, Vistawave, and Windev)
 - 7Zeb
