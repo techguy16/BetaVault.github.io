@@ -23,7 +23,22 @@ const availableFeaturedOS = [
     codename: "Threshold",
     releaseDate: new Date(2014, 06, 22),
     build: 9780
-  }
+  },
+
+  {
+   name: "Windows Whistler build 2428",
+   desc: "This build is the first build to have the new Windows flag on the boot screen, this build also modified the OOBE, and setup wizzards.",
+   codename: "Whistler", 
+   releaseDate: new Date(2001, 01, 29),
+   build: 2428
+  },
+
+  {
+    name: "Ubuntu 4.10",
+    desc: "The first version of Ubuntu, starting a new open-source linux distro enjoyed by millions today.",
+    codename: "Warty Warthog",
+    build: 4.10
+  },
 ];
 
 const chosenOS = availableFeaturedOS[Math.floor(Math.random() * availableFeaturedOS.length)];
