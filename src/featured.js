@@ -37,7 +37,14 @@ const availableFeaturedOS = [
     name: "Ubuntu 4.10",
     desc: "The first version of Ubuntu, starting a new open-source linux distro enjoyed by millions today.",
     codename: "Warty Warthog",
-    build: 4.10
+    build: "4.10"
+  },
+
+  {
+    name: "Windows 10 build 9906",
+    desc: "This is a build of Windows 10 that has some minor changes such as new Photos app UI, and the camera was taken out of a beta.",
+    codename: "Threshold",
+    build: 9906
   },
 ];
 
