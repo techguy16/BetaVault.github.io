@@ -21,30 +21,30 @@ const availableFeaturedOS = [
     name: "Windows 10 build 9780",
     desc: "This build brings back the start menu in a Windows 8/8.1 Metro UI style.",
     codename: "Threshold",
-    releaseDate: new Date(2014, 06, 22),
-    build: 9780
+    releaseDate: new Date(2014, 6, 22),
+    build: 9780,
   },
 
   {
-   name: "Windows Whistler build 2428",
-   desc: "This build is the first build to have the new Windows flag on the boot screen, this build also modified the OOBE, and setup wizzards.",
-   codename: "Whistler", 
-   releaseDate: new Date(2001, 01, 29),
-   build: 2428
+    name: "Windows Whistler build 2428",
+    desc: "This build is the first build to have the new Windows flag on the boot screen, this build also modified the OOBE, and setup wizzards.",
+    codename: "Whistler",
+    releaseDate: new Date(2001, 1, 29),
+    build: 2428,
   },
 
   {
     name: "Ubuntu 4.10",
     desc: "The first version of Ubuntu, starting a new open-source linux distro enjoyed by millions today.",
     codename: "Warty Warthog",
-    build: "4.10"
+    build: "4.10",
   },
 
   {
     name: "Windows 10 build 9906",
     desc: "This is a build of Windows 10 that has some minor changes such as new Photos app UI, and the camera was taken out of a beta.",
     codename: "Threshold",
-    build: 9906
+    build: 9906,
   },
 ];
 
