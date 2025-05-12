@@ -37,6 +37,7 @@ const availableFeaturedOS = [
     name: "Ubuntu 4.10",
     desc: "The first version of Ubuntu, starting a new open-source linux distro enjoyed by millions today.",
     codename: "Warty Warthog",
+    releaseDate: new Date(2004,10,20),
     build: "4.10",
   },
 
@@ -44,7 +45,16 @@ const availableFeaturedOS = [
     name: "Windows 10 build 9906",
     desc: "This is a build of Windows 10 that has some minor changes such as new Photos app UI, and the camera was taken out of a beta.",
     codename: "Threshold",
+    releaseDate: new Date(2014,12,9),
     build: 9906,
+  },
+
+  {
+    name: "Windows 10 build 9860",
+    desc: "This build of Windows 10 introduced a new XAML start menu, and hidden apps.",
+    codename: "Threshold",
+    releaseDate: new Date(2014,10,8),
+    build: 9860,
   },
 ];
 
