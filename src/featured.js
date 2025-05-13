@@ -58,7 +58,7 @@ const availableFeaturedOS = [
   },
 
   {
-    name: "Windows 2000 build 1515",,
+    name: "Windows 2000 build 1515",
     desc: "This is the earliest avaliable build of Windows 2000 that was leaked, and is even mislabled.",
     codename: "Windows NT 5.0",
     releaseDate: new Date(1997,3,17),
