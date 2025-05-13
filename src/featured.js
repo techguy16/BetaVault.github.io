@@ -56,6 +56,30 @@ const availableFeaturedOS = [
     releaseDate: new Date(2014,10,8),
     build: 9860,
   },
+
+  {
+    name: "Windows 2000 build 1515",,
+    desc: "This is the earliest avaliable build of Windows 2000 that was leaked, and is even mislabled.",
+    codename: "Windows NT 5.0",
+    releaseDate: new Date(1997,3,17),
+    build: 1515,
+  },
+
+  {
+    name: "Windows 2000 build 1575",
+    desc: "This build introduced a whole new wallpaper and many GUI changes",
+    codename: "Windows NT 5.0",
+    releaseDate: new Date(1997,6,11),
+    build: 1575,
+  },
+
+  {
+    name: "Windows 2000 build 1580",
+    desc: "A pre-beta Windows 2000 build with new setup wizzard and control panel improvements.",
+    codename: "Windows NT 5.0",
+    releaseDate: new Date(1997,6,20),
+    build: 1580,
+  },
 ];
 
 const chosenOS = availableFeaturedOS[Math.floor(Math.random() * availableFeaturedOS.length)];
