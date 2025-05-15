@@ -80,6 +80,14 @@ const availableFeaturedOS = [
     releaseDate: new Date(1997,6,20),
     build: 1580,
   },
+
+  {
+    name: "Windows 2000 build 1585",
+    desc: "A pre-beta build of Windows 2000 containing new folder options and quick launch settings.",
+    codename: "Windows NT 5.0",
+    releaseDate: new Date(1997, 6, 25),
+    build: 1585,
+  },
 ];
 
 const chosenOS = availableFeaturedOS[Math.floor(Math.random() * availableFeaturedOS.length)];
