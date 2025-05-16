@@ -9,3 +9,5 @@ Contributors:
 - Viradex
 - XenonWindows (aka MSNeptuned, Threshold, Vistawave, and Windev)
 - 7Zeb
+- jpb (aka ErrorTek, Anaheim, plasmafan123, jpbandroid)
+- NotHype
