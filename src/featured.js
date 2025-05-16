@@ -27,7 +27,7 @@ const availableFeaturedOS = [
 
   {
     name: "Windows Whistler build 2428",
-    desc: "This build is the first build to have the new Windows flag on the boot screen, this build also modified the OOBE, and setup wizzards.",
+    desc: "This build is the first build to have the new Windows flag on the boot screen. This build also modified the OOBE and setup wizards.",
     codename: "Whistler",
     releaseDate: new Date(2001, 1, 29),
     build: 2428,
@@ -43,7 +43,7 @@ const availableFeaturedOS = [
 
   {
     name: "Windows 10 build 9906",
-    desc: "This is a build of Windows 10 that has some minor changes such as new Photos app UI, and the camera was taken out of a beta.",
+    desc: "This is a build of Windows 10 that has some minor changes such as new Photos app UI, and the Camera app was taken out of beta.",
     codename: "Threshold",
     releaseDate: new Date(2014,12,9),
     build: 9906,
@@ -51,7 +51,7 @@ const availableFeaturedOS = [
 
   {
     name: "Windows 10 build 9860",
-    desc: "This build of Windows 10 introduced a new XAML start menu, and hidden apps.",
+    desc: "This build of Windows 10 introduced a new XAML start menu and hidden apps.",
     codename: "Threshold",
     releaseDate: new Date(2014,10,8),
     build: 9860,
@@ -59,7 +59,7 @@ const availableFeaturedOS = [
 
   {
     name: "Windows 2000 build 1515",
-    desc: "This is the earliest avaliable build of Windows 2000 that was leaked, and is even mislabled.",
+    desc: "This is the earliest avaliable build of Windows 2000 that was leaked, and was even mislabled.",
     codename: "Windows NT 5.0",
     releaseDate: new Date(1997,3,17),
     build: 1515,
@@ -75,7 +75,7 @@ const availableFeaturedOS = [
 
   {
     name: "Windows 2000 build 1580",
-    desc: "A pre-beta Windows 2000 build with new setup wizzard and control panel improvements.",
+    desc: "A pre-beta Windows 2000 build with new setup wizard and Control Panel improvements.",
     codename: "Windows NT 5.0",
     releaseDate: new Date(1997,6,20),
     build: 1580,
