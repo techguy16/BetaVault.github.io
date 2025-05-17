@@ -88,6 +88,14 @@ const availableFeaturedOS = [
     releaseDate: new Date(1997, 6, 25),
     build: 1585,
   },
+
+  {
+    name: "Windows 11 Zeb Edition",
+    desc: "A modified version of Windows 11 made by 7Zeb that removes some Microsoft bloatware and integrates programs like VMware, OBS Studio, and more",
+    codename: "ZebV2",
+    releaseDate: new Date(2025,5,17),
+    build: 22631.2428,
+  },
 ];
 
 const chosenOS = availableFeaturedOS[Math.floor(Math.random() * availableFeaturedOS.length)];
