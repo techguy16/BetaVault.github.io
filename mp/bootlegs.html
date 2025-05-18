@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Windows 2000 - BetaVault Downloads</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="icon" type="image/x-icon" href="/betavault.ico">
+    <title>Bootleg Windows Versions - BetaVault</title>
+    <link rel="stylesheet" href="/style.css"/>
+        <link rel="icon" type="image/x-icon" href="/betavault.ico">
+
   </head>
   <body>
     <header>
@@ -43,7 +44,7 @@
           </button>
           <nav>
             <a href="/index.html">Home</a>
-            <a href="/download.html">Downloads</a>
+            <a href="/download.html" class="active">Downloads</a>
             <a href="/changelog.html">Changelog</a>
             <a href="/contribute.html">Contribute!</a>
             <a href="/about.html">About</a>
@@ -57,37 +58,40 @@
       </div>
       <div class="menu-overlay"></div>
     </header>
+
     <main>
       <div class="content-container">
+        <!-- Main Content Box -->
         <section class="main-content">
-          <h2>Windows 2000/NT 5.0</h2>
-          <p>The first version of Windows NT, without the NT branding.</p>
-          <br/>
-          <h2>Download Builds</h2>
-          <p>Currently there are 5 builds avaliable to downlaod.</p>
+          <h2>Bootleg Windows Versions</h2>
+          <p>The following is a section where you can download various Windows versions that people have modified to include custom programs, themes, settings, and more.</p>
+          <p>Below you will find a collection of Windows Bootlegs that you can download
+          to test out or use on real hardware.</p>
           <br>
-          <p>Windows 2000 build 1515 <a href="https://katyisd-my.sharepoint.com/:u:/g/personal/k1637252_students_katyisd_org/EWiCP3RCjTNNv9TZPYgA-30BvP7UiMcLzAUOqatkL-mn4w?e=d0MPoF">Download</a> <a href="https://betawiki.net/wiki/Windows_2000_build_1515">BetaWiki</a></p>
-          <p>Windows 2000 build 1575 <a href="https://katyisd-my.sharepoint.com/:u:/g/personal/k1637252_students_katyisd_org/EaXscRcJlbFOlj6mXLFvHcMBQQdjB80nU-dlReHSyBT71Q?e=XQ7Xb2">Download</a> <a href="https://betawiki.net/wiki/Windows_2000_build_1575">Betawiki</a></p>
-          <p>Windows 2000 build 1580 <a href="https://katyisd-my.sharepoint.com/:u:/g/personal/k1637252_students_katyisd_org/EYXB9KVMZF1Nv37GCN5c7_IBmJvt3vlsYBfZgZXMMXIp6A?e=ryqNzZ">Download</a> <a href="https://betawiki.net/wiki/Windows_2000_build_1580">Betawiki</a></p>
-          <p>Windows 2000 build 1585 <a href="https://katyisd-my.sharepoint.com/:u:/g/personal/k1637252_students_katyisd_org/EZXbUWttNG1Hq2iGPtWOXQUBrD0Hdlq5T6XjkoaKo8Saqg?e=7RrJDo">Download</a> <a href="https://betawiki.net/wiki/Windows_2000_build_1585">Betawiki</a></p>
-          <p>Windows 2000 build 1592 <a href="https://katyisd-my.sharepoint.com/:u:/g/personal/k1637252_students_katyisd_org/EdSk1RkYT79FgOqd9k2P6JABNBYgTuks9IF0i8rM8ifwxA?e=exCptM">Download</a> <a href="https://betawiki.net/wiki/Windows_2000_build_1592">Betawiki</a></p>
-          <p>Windows 2000 build 1627 <a href="https://katyisd-my.sharepoint.com/:u:/g/personal/k1637252_students_katyisd_org/EZ_b3uKYDzhHo_BmTnjc4AwBSIV7EW9TRBX9WVcAChlFhA">Download Broken</a> <a href="https://betawiki.net/wiki/Windows_2000_build_1627">Betawiki</a></p>
+          <br>
+          <p>This is in early development, this list will be sorted by version soon.</p>
+          <ul>
+            <li><a href="/downloads/11-bootlegs.html">Windows 11 Bootlegs</a></li>
+          </ul>
         </section>
 
-        <aside class="info-box">
-          <h3>Featured Build: Windows XP build 2296</h3>
-          <p>Placeholder</p>
+        <!-- Information Box -->
+          <aside class="info-box">
+          <h3 class="featuredName">Loading...</h3>
+          <p class="featuredDesc"></p>
           <ul>
-            <li>Compiled on: October 24, 2000</li>
-            <li>Codename: Whistler</li>
-            <li>Architecture: x86</li>
+            <li class="featuredReleaseDate"></li>
+            <li class="featuredBuild"></li>
+            <li class="featuredCodename"></li>
           </ul>
         </aside>
       </div>
     </main>
+
     <footer>
       <p>&copy; 2025 BetaVault. All rights reserved.</p>
     </footer>
     <script src="/src/startup.js"></script>
+    <script src="/src/featured.js" defer></script>
   </body>
 </html>
