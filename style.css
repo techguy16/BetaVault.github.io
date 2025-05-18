@@ -207,7 +207,7 @@ nav a.active {
 }
 
 /* Link Styling */
-a {
+a, .hamburger {
   color: #e0e0ff;
   text-decoration: none;
   position: relative;
