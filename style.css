@@ -234,6 +234,27 @@ a:hover {
   background: rgba(186, 85, 211, 0.1);
 }
 
+[data-theme="light"] nav a {
+  color: #5b369e;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: rgba(140, 65, 158, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-shadow: 0 0 10px rgba(140, 65, 158, 0.5);
+  animation: fadeSlideIn 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+[data-theme="light"] nav a:hover,
+[data-theme="light"] nav a.active {
+  background: rgba(140, 65, 158, 0.2);
+  box-shadow: 0 0 15px rgba(140, 65, 158, 0.3), 0 0 30px rgba(147, 112, 219, 0.2);
+  transform: translateY(-2px);
+}
+
 /* Navigation links override to maintain existing nav styles */
 nav {
   display: flex;
@@ -845,6 +866,7 @@ li,
 }
 
 [data-theme="light"] header,
+[data-theme="light"] .header-right,
 [data-theme="light"] .main-content,
 [data-theme="light"] .info-box,
 [data-theme="light"] footer {
@@ -898,6 +920,21 @@ li,
     height: 100vh;
     width: 250px;
     background: rgba(43, 21, 77, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 5rem 1rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  
+  [data-theme="light"] .header-controls {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: rgba(232, 223, 246, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     flex-direction: column;
