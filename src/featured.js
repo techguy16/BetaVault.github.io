@@ -96,6 +96,14 @@ const availableFeaturedOS = [
     releaseDate: new Date(2025,5,17),
     build: 22631.2428,
   },
+
+  {
+    name: "RevertSV",
+    desc: "This Windows Mod makes Windows 11 look like Windows 10, making it MUCH better for people who still want to use a Windows 10 UI, but want to use a modern OS",
+    codename: "RevertSV 2.0",
+    releaseDate: new Date(2024,12,28),
+    build: 2,
+  },
 ];
 
 const chosenOS = availableFeaturedOS[Math.floor(Math.random() * availableFeaturedOS.length)];
