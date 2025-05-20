@@ -10,6 +10,6 @@ Contributors:
 
 - Viradex
 - XenonWindows (aka MSNeptuned, Threshold, Vistawave, and Windev)
-- 7Zeb (aka RutwikasZeb)
+- 7Zeb (aka RutwikasZeb, Rutwik City)
 - jpb (aka Anaheim, plasmafan123, jpbandroid)
 - NotHype
